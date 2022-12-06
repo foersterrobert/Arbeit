@@ -36,6 +36,12 @@ if a1Btn:
 
 st.subheader("Aufgabe 2")
 
+st.code(
+    """
+    f"Kreditsumme nach {jahre} Jahren: {round(kreditSumme * ((1 + zinsSatz / 100) ** jahre), 2)}€"
+    """, language="python"
+)
+
 kreditSumme = st.number_input("Kreditsumme in Euro", value=500, min_value=0)
 zinsSatz = st.number_input("Zinssatz in Prozent", value=3, min_value=0)
 jahre = st.slider("Anzahl der Jahre", value=1, max_value=20)
@@ -44,7 +50,7 @@ a2Btn = st.button("Aufgabe 2")
 if a2Btn:
     st.text(
     f"""
-Kreditsumme nach einem Jahr: {
+Kreditsumme nach {jahre} Jahren: {
     round(kreditSumme * ((1 + zinsSatz / 100) ** jahre), 2)
     }€
 """
@@ -244,5 +250,6 @@ def weihnachtsBaum(l = 6):
 
 a8Btn = st.button("Aufgabe 8")
 
+weihnachtsBaumLaenge = st.slider("Weihnachtsbaum Länge", value=6)
 if a8Btn:
-    weihnachtsBaum(l=7)
+    weihnachtsBaum(weihnachtsBaumLaenge)
