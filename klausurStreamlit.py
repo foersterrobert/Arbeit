@@ -1,5 +1,10 @@
 import streamlit as st
 
+st.set_page_config(
+    "Klausur",
+    "🎄",
+)
+
 st.title("Klausur")
 
 st.subheader("Aufgabe 1")
